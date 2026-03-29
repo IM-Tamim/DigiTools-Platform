@@ -1,12 +1,12 @@
-import './App.css'
+import "./App.css";
+import Navbar from "./Components/Navbar";
 
 function App() {
   return (
     <>
-      <h1>Vite + React</h1>
-
+      <Navbar></Navbar>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
