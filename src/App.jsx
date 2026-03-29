@@ -6,6 +6,7 @@ import Rating from "./Components/Rating";
 import Steps from "./Components/Steps";
 import Tab from "./Components/Tab";
 import Transform from "./Components/Transform";
+import Footer from "./Components/Footer";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Steps></Steps>
       <Pricing></Pricing>
       <Transform></Transform>
+      <Footer></Footer>
     </>
   );
 }
