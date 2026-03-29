@@ -7,8 +7,9 @@ import Steps from "./Components/Steps";
 import Tab from "./Components/Tab";
 import Transform from "./Components/Transform";
 import Footer from "./Components/Footer";
-import { Suspense } from "react";
+import { Suspense, useState } from "react";
 import Products from "./Components/Products";
+import Cart from "./Components/Cart";
 
 const fetchPromise = async () => {
   const res = await fetch("/products.json");
@@ -16,12 +17,14 @@ const fetchPromise = async () => {
 };
 function App() {
   const fetchProducts = fetchPromise();
+
+  const [activeTab, setActiveTab] = useState("Products");
   return (
     <>
       <Navbar></Navbar>
       <Hero></Hero>
       <Rating></Rating>
-      <Tab></Tab>
+      <Tab activeTab={activeTab} setActiveTab={setActiveTab}></Tab>
 
       <Suspense
         fallback={
@@ -30,7 +33,11 @@ function App() {
           </div>
         }
       >
-        <Products fetchProducts={fetchProducts}></Products>
+        {activeTab === "Products" ? (
+          <Products fetchProducts={fetchProducts}></Products>
+        ) : (
+          <Cart></Cart>
+        )}
       </Suspense>
 
       <Steps></Steps>

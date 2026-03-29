@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { Check } from "lucide-react";
 
 const Product = ({ product }) => {
+  const [isCarted, setIsCarted] = useState(false);
+  const handleCartBtn = () => {
+    setIsCarted(true);
+  };
   return (
     <div className="card bg-base-100 border border-base-200 shadow-sm rounded-2xl p-5 flex flex-col gap-4 relative">
       <div className="absolute top-4 right-4">
@@ -15,11 +19,13 @@ const Product = ({ product }) => {
           {product.tag}
         </span>
       </div>
-      
+
       <img src={product.icon} alt={product.name} className="w-12 h-12" />
 
       <div>
-        <h3 className="text-lg font-bold text-base-content mb-1">{product.name}</h3>
+        <h3 className="text-lg font-bold text-base-content mb-1">
+          {product.name}
+        </h3>
         <p className="text-sm text-gray-500">{product.description}</p>
       </div>
 
@@ -30,17 +36,26 @@ const Product = ({ product }) => {
 
       <ul className="flex flex-col gap-2">
         {product.features.map((feature) => (
-          <li key={feature} className="flex items-center gap-2 text-sm text-gray-500">
+          <li
+            key={feature}
+            className="flex items-center gap-2 text-sm text-gray-500"
+          >
             <Check className="text-green-500"></Check>
             {feature}
           </li>
         ))}
       </ul>
-      
-      <button className="btn btn-primary bg-linear-to-r from-blue-500 to-purple-600 w-full rounded-full">
-        Buy Now
-      </button>
 
+      <button
+        onClick={handleCartBtn}
+        className={`btn w-full rounded-full transition-colors ${
+          isCarted
+            ? "bg-green-500 hover:bg-green-600 text-white"
+            : "btn-primary bg-linear-to-r from-blue-500 to-purple-600"
+        }`}
+      >
+        {isCarted ? "Item Added" : "Buy Now"}
+      </button>
     </div>
   );
 };
