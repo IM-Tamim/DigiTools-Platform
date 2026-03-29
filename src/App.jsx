@@ -10,6 +10,7 @@ import Footer from "./Components/Footer";
 import { Suspense, useState } from "react";
 import Products from "./Components/Products";
 import Cart from "./Components/Cart";
+import { ToastContainer} from 'react-toastify';
 
 const fetchPromise = async () => {
   const res = await fetch("/products.json");
@@ -45,6 +46,7 @@ function App() {
       <Pricing></Pricing>
       <Transform></Transform>
       <Footer></Footer>
+      <ToastContainer />
     </>
   );
 }
