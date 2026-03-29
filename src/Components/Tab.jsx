@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Tab = ({ activeTab, setActiveTab }) => {
+const Tab = ({ activeTab, setActiveTab,cart }) => {
   return (
     <div className="text-center space-y-3">
       <h1 className="text-3xl font-bold">Premium Digital Tools</h1>
@@ -14,7 +14,7 @@ const Tab = ({ activeTab, setActiveTab }) => {
           type="radio"
           name="my_tabs_1"
           className={`tab rounded-3xl w-25 transition-all ${
-            activeTab === 'Products' ? 'bg-linear-to-r from-blue-500 to-purple-600 text-white' : ""
+            activeTab === 'Products' ? 'bg-linear-to-r from-blue-500 to-purple-600 text-white' : " text-black bg-gray-100"
           }`}
           aria-label="Products"
           onClick={() => setActiveTab('Products')}
@@ -24,9 +24,9 @@ const Tab = ({ activeTab, setActiveTab }) => {
           type="radio"
           name="my_tabs_1"
           className={`tab rounded-3xl w-25 transition-all ${
-            activeTab === 'Cart' ? 'bg-linear-to-r from-blue-500 to-purple-600 text-white' : ""
+            activeTab === 'Cart' ? 'bg-linear-to-r from-blue-500 to-purple-600 text-white' : "text-black bg-gray-100"
           }`}
-          aria-label="Cart"
+          aria-label={`Cart (${cart.length})`}
           onClick={() => setActiveTab('Cart')}
         />
       </div>

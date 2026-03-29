@@ -1,7 +1,7 @@
 import React from "react";
 import shopingCartimg from "../assets/products/shopping-cart.png";
 
-const Navbar = () => {
+const Navbar = ({ cart, setActiveTab }) => {
   return (
     <div className="shadow-md">
       <div className="navbar w-11/12 mx-auto max-w-300">
@@ -15,13 +15,12 @@ const Navbar = () => {
                 viewBox="0 0 24 24"
                 stroke="currentColor"
               >
-                {" "}
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   strokeWidth="2"
                   d="M4 6h16M4 12h8m-8 6h16"
-                />{" "}
+                />
               </svg>
             </div>
             <ul
@@ -70,7 +69,19 @@ const Navbar = () => {
         </div>
         <div className="navbar-end">
           <div className="flex gap-2.5 items-center">
-            <img src={shopingCartimg} alt="" className="cursor-pointer" />
+            <div className="relative w-7 h-7">
+              <button
+                onClick={() => setActiveTab("Cart")}
+                className="flex items-center justify-center w-7 h-7 p-1 rounded-full bg-gray-200 transition-colors cursor-pointer"
+              >
+                <img src={shopingCartimg} alt="" />
+              </button>
+              {cart.length > 0 && (
+                <p className="absolute -top-1 -right-1 bg-red-500 text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full min-w-[18px] text-center shadow-sm">
+                  {cart.length}
+                </p>
+              )}
+            </div>
             <a className="border-gray-300 cursor-pointer">Login</a>
             <a className="btn text-white rounded-3xl bg-linear-to-r from-blue-600 to-purple-600">
               Get Started

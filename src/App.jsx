@@ -16,17 +16,17 @@ const fetchPromise = async () => {
   const res = await fetch("/products.json");
   return res.json();
 };
+const fetchProducts = fetchPromise();
 function App() {
-  const fetchProducts = fetchPromise();
 
   const [activeTab, setActiveTab] = useState("Products");
   const [cart, setCart] = useState([]);
   return (
     <>
-      <Navbar></Navbar>
+      <Navbar cart={cart} setActiveTab={setActiveTab}></Navbar>
       <Hero></Hero>
       <Rating></Rating>
-      <Tab activeTab={activeTab} setActiveTab={setActiveTab}></Tab>
+      <Tab activeTab={activeTab} setActiveTab={setActiveTab} cart={cart}></Tab>
 
       <Suspense
         fallback={
