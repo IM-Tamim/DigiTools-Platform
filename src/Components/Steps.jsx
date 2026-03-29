@@ -5,7 +5,7 @@ import rocketImg from "../assets/rocket.png";
 
 const Steps = () => {
   return (
-    <div className="py-10 px-4 bg-gray-50 my-10">
+    <div className="py-20 px-4 bg-gray-50 my-10">
       <div className="max-w-6xl mx-auto ">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
@@ -22,7 +22,7 @@ const Steps = () => {
               <img src={userImg} alt="Create Account" className="w-10 h-10" />
             </div>
 
-            <div className="absolute top-2 right-2 w-10 h-10 flex items-center justify-center rounded-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold">
+            <div className="absolute top-2 right-2 w-10 h-10 flex items-center justify-center rounded-full bg-linear-to-r from-blue-600 to-purple-600 text-white font-bold">
               01
             </div>
 
@@ -42,7 +42,7 @@ const Steps = () => {
               />
             </div>
 
-            <div className="absolute top-2 right-2 w-10 h-10 flex items-center justify-center rounded-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold">
+            <div className="absolute top-2 right-2 w-10 h-10 flex items-center justify-center rounded-full bg-linear-to-r from-blue-600 to-purple-600 text-white font-bold">
               02
             </div>
 
@@ -57,7 +57,7 @@ const Steps = () => {
               <img src={rocketImg} alt="Start Creating" className="w-10 h-10" />
             </div>
 
-            <div className="absolute top-2 right-2 w-10 h-10 flex items-center justify-center rounded-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold">
+            <div className="absolute top-2 right-2 w-10 h-10 flex items-center justify-center rounded-full bg-linear-to-r from-blue-600 to-purple-600 text-white font-bold">
               03
             </div>
 
