@@ -14,7 +14,7 @@ const Hero = () => {
         <h1 className="text-5xl md:text-6xl font-bold mb-5 max-w-lg">
           Supercharge Your Digital Workflow
         </h1>
-        <p className="text-gray-500 mb-6 max-w-lg">
+        <p className="text-gray-500 text-sm mb-6 max-w-lg">
           Access premium AI tools, design assets, templates, and productivity
           software—all in one place. Start creating faster today. Explore
           Products
