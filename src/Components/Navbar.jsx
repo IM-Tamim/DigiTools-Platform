@@ -3,7 +3,7 @@ import shopingCartimg from "../assets/products/shopping-cart.png";
 
 const Navbar = () => {
   return (
-    <div className="mx-auto shadow-md">
+    <div className="shadow-md">
       <div className="navbar w-11/12 mx-auto max-w-300">
         <div className="navbar-start">
           <div className="dropdown">
@@ -72,7 +72,7 @@ const Navbar = () => {
           <div className="flex gap-2.5 items-center">
             <img src={shopingCartimg} alt="" className="cursor-pointer" />
             <a className="border-gray-300 cursor-pointer">Login</a>
-            <a className="btn text-white rounded-3xl bg-linear-to-r from-blue-500 to-purple-600">
+            <a className="btn text-white rounded-3xl bg-linear-to-r from-blue-600 to-purple-600">
               Get Started
             </a>
           </div>
