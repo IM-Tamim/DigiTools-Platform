@@ -19,6 +19,7 @@ function App() {
   const fetchProducts = fetchPromise();
 
   const [activeTab, setActiveTab] = useState("Products");
+  const [cart, setCart] = useState([]);
   return (
     <>
       <Navbar></Navbar>
@@ -34,9 +35,9 @@ function App() {
         }
       >
         {activeTab === "Products" ? (
-          <Products fetchProducts={fetchProducts}></Products>
+          <Products fetchProducts={fetchProducts} cart={cart} setCart={setCart}></Products>
         ) : (
-          <Cart></Cart>
+          <Cart cart={cart} setCart={setCart}></Cart>
         )}
       </Suspense>
 

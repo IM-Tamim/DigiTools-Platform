@@ -1,7 +1,6 @@
 import React from 'react';
 
 const Tab = ({ activeTab, setActiveTab }) => {
-  console.log(activeTab)
   return (
     <div className="text-center space-y-3">
       <h1 className="text-3xl font-bold">Premium Digital Tools</h1>
@@ -14,7 +13,9 @@ const Tab = ({ activeTab, setActiveTab }) => {
         <input
           type="radio"
           name="my_tabs_1"
-          className="tab rounded-3xl w-25"
+          className={`tab rounded-3xl w-25 transition-all ${
+            activeTab === 'Products' ? 'bg-linear-to-r from-blue-500 to-purple-600 text-white' : ""
+          }`}
           aria-label="Products"
           onClick={() => setActiveTab('Products')}
           defaultChecked
@@ -22,7 +23,9 @@ const Tab = ({ activeTab, setActiveTab }) => {
         <input
           type="radio"
           name="my_tabs_1"
-          className="tab rounded-3xl w-25"
+          className={`tab rounded-3xl w-25 transition-all ${
+            activeTab === 'Cart' ? 'bg-linear-to-r from-blue-500 to-purple-600 text-white' : ""
+          }`}
           aria-label="Cart"
           onClick={() => setActiveTab('Cart')}
         />
