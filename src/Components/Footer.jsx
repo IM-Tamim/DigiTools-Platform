@@ -4,10 +4,8 @@ import { FaInstagram, FaFacebookF, FaTwitter } from "react-icons/fa";
 const Footer = () => {
   return (
     <footer className="bg-[#0f172a] text-white">
-      {/* Main grid */}
       <div className="max-w-6xl mx-auto px-6 py-12 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
         
-        {/* Brand */}
         <div className="col-span-2 flex flex-col gap-3">
           <h2 className="text-xl font-bold">DigiTools</h2>
           <p className="text-white/80 text-sm max-w-xs">
@@ -15,7 +13,6 @@ const Footer = () => {
           </p>
         </div>
 
-        {/* Product Links */}
         <div>
           <h4 className="font-semibold mb-2">Product</h4>
           <div className="flex flex-col gap-1 text-sm text-white/80">
@@ -26,7 +23,6 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Company Links */}
         <div>
           <h4 className="font-semibold mb-2">Company</h4>
           <div className="flex flex-col gap-1 text-sm text-white/80">
@@ -37,7 +33,6 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Resources Links */}
         <div>
           <h4 className="font-semibold mb-2">Resources</h4>
           <div className="flex flex-col gap-1 text-sm text-white/80">
@@ -48,7 +43,6 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Social Links */}
         <div>
           <h4 className="font-semibold mb-2">Social Links</h4>
           <div className="flex gap-3 mt-2">
@@ -65,7 +59,6 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Bottom bar */}
       <div className="border-t border-white/10">
         <div className="max-w-6xl mx-auto px-6 py-4 flex flex-col sm:flex-row justify-between items-center gap-2 text-sm text-white/50">
           <span>© 2026 DigiTools. All rights reserved.</span>

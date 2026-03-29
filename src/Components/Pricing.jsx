@@ -70,10 +70,10 @@ export function Pricing() {
         {plans.map((plan) => (
           <div
             key={plan.name}
-            className={`relative flex flex-col flex-1 min-w-[260px] max-w-[300px] rounded-2xl p-8 gap-6 transition-all duration-300
+            className={`relative flex flex-col flex-1 min-w-65 max-w-75 rounded-2xl p-8 gap-6 transition-all duration-300
             ${
               plan.popular
-                ? "bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-2xl shadow-purple-500/30 scale-105"
+                ? "bg-linear-to-r from-blue-600 to-purple-600 text-white shadow-2xl shadow-purple-500/30 scale-105"
                 : "bg-base-100 border border-base-200 shadow-md hover:shadow-xl"
             }`}
           >
@@ -131,7 +131,7 @@ export function Pricing() {
               ${
                 plan.popular
                   ? "bg-white text-black hover:bg-gray-200"
-                  : "bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:opacity-90"
+                  : "bg-linear-to-r from-blue-600 to-purple-600 text-white hover:opacity-90"
               }`}
             >
               {plan.btnLabel}

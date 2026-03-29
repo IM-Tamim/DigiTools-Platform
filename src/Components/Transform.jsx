@@ -2,7 +2,7 @@ import React from "react";
 
 const Transform = () => {
   return (
-    <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-20 px-4 text-center">
+    <section className="bg-linear-to-r from-blue-600 to-purple-600 py-20 px-4 text-center">
   <div className="max-w-xl mx-auto">
     
     <h2 className="text-4xl font-bold text-white mb-4">
