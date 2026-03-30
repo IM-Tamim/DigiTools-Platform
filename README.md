@@ -1,12 +1,29 @@
-# React + Vite
+#  DigiTools — Premium Digital Tools Marketplace
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern digital product marketplace built with React where users can browse, add to cart, and purchase premium tools like AI writing assistants, design templates, stock assets, and more.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+##  Live Site
 
-## Expanding the ESLint configuration
+[🔗 View Live](https://snazzy-florentine-44a735.netlify.app)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+##  Technologies Used
+
+- **React.js** — Component-based UI
+- **Tailwind CSS** — Utility-first styling
+- **DaisyUI** — Tailwind component library
+- **JavaScript (ES6+)** — App logic
+- **React-Toastify** — Toast notifications
+- **JSON** — Local product data
+
+---
+
+##  Features
+
+-  **Cart System** — Add products to cart, remove individual items, view running total, and proceed to checkout which clears the cart
+-  **Toast Notifications** — Real-time feedback for add to cart, remove, and checkout actions using React-Toastify
+-  **Fully Responsive** — Optimized layout across mobile, tablet, and desktop screens
+
