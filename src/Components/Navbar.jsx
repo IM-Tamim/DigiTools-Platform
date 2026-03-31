@@ -44,7 +44,7 @@ const Navbar = ({ cart, setActiveTab }) => {
               </li>
             </ul>
           </div>
-          <a className="text-3xl font-bold bg-linear-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
+          <a className="hidden sm:block text-3xl font-bold bg-linear-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
             DigiTools
           </a>
         </div>
